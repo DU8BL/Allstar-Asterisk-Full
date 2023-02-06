@@ -15,15 +15,7 @@ Allstar-Asterisk-Full DEB package for the amd64 architecture
 
 ### What is also Added:
 
-* Fix crash on high number of nodes connection (amd64).
-* Added thread names for debugging.
-* Protect against overflow, when calculating how long to wait for a frame and add a tiny corner case.
-* Initialize offset for adaptive jitter buffer (to test).
-* Fix an ast_netsock_list memory leak (to test).
-* Fix insufficient array size for round robin (to test).
-* Add validity check for key names when writing (to test).
-* Autoservice loop optimization causes a busy loop.
-* Remove an odd redundant comparison.
+* Some changes from ASL 2.0.0 distribution
 
 -----------------------------------------------------------
 
@@ -57,8 +49,8 @@ libvorbisenc2 libwrap0 zlib1g
 * Download and install the Allstar-Asterisk-Full DEB package
 
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20230117-2_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20230117-2_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20230206-3_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20230206-3_amd64.deb
 </pre>
 
 -----------------------------------------------------------
@@ -68,13 +60,13 @@ dpkg -i allstar-asterisk-full_1.02-20230117-2_amd64.deb
 * This will overwrite existing /etc/asterisk/ files. Be sure to backup the needed files before executing the commands.
 
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20230117-2_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20230117-2_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20230206-3_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20230206-3_amd64.deb
 </pre>
 
 -----------------------------------------------------------
 
-Codebase from https://github.com/pttlink/Asterisk
+Codebase from https://github.com/pttlink/Asterisk and https://github.com/AllStarLink/ASL-Asterisk
 
 ### Copyright
 
