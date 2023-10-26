@@ -67,8 +67,8 @@ libvorbis0a libvorbisenc2 libwrap0 zlib1g
 
 For amd64
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20231024-2_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20231024-2_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20231026-3_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20231026-3_amd64.deb
 </pre>
 
 -----------------------------------------------------------
