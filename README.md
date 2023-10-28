@@ -27,6 +27,10 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Echolink nodes/conferences are shown in names - if available (chan_echolink)
 * ~~Add checking in link messages [experimental] (app_rpt)~~
 * Fix echolink direction status (app_rpt)
+* Improve new call lookup method (chan_echolink)
+* Log messages received from an EchoLink client to the ASL log file (chan_echolink)
+* Add an option to dump node linklist statistics (app_rpt)
+
 
 * More to follow :)
 
@@ -67,8 +71,8 @@ libvorbis0a libvorbisenc2 libwrap0 zlib1g
 
 For amd64
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20231026-3_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20231026-3_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20231028-4_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20231028-4_amd64.deb
 </pre>
 
 -----------------------------------------------------------
