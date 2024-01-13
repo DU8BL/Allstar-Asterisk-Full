@@ -26,12 +26,11 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Add APRS - send stats to aprs.fi [ER-N0CALL | EL-N0CALL] (chan_echolink)
 * Add message about your echolink node - similar to hamvoip (chan_echolink)
 * Echolink nodes/conferences are shown in names - if available (chan_echolink)
-* ~~Add checking in link messages [experimental] (app_rpt)~~
 * Fix echolink direction status (app_rpt)
 * Improve new call lookup method with DB update [recoded in Rev#5] (chan_echolink)
 * Log messages received from an EchoLink client to the ASL log file (chan_echolink)
 * Add an option to dump node linklist statistics (app_rpt)
-
+* Various critical changes and fixes have been made to the Asterisk core, resulting in increased stability and performance (asterisk)
 
 * More to follow :)
 
@@ -72,8 +71,8 @@ libvorbis0a libvorbisenc2 libwrap0 zlib1g
 
 For amd64
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20231107-5_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20231107-5_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240113-6_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20240113-6_amd64.deb
 </pre>
 
 -----------------------------------------------------------
