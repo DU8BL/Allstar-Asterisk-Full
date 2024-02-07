@@ -1,6 +1,6 @@
 # Allstar-Asterisk-Full
 Allstar-Asterisk-Full DEB packages for amd64 architecture
-* Tested and Stable - works on Debian 11/Ubuntu 20.04
+* Debian 11
 
 -----------------------------------------------------------
 
@@ -16,8 +16,8 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 
 ### Changes/Fixes:
 
-* Fix timing issue (app_rpt)
-* Fix segfault "PBX may not have terminated properly ..." (app_rpt)
+* Fix timing issues (app_rpt) [revised in Rev#7]
+* Fix segfault "PBX may not have terminated properly ..." (app_rpt) [revised in Rev#7]
 * Refactored and revamp the code (app_rpt)
 * Add "phonesendlinks" - similar to hamvoip (app_rpt)
 * Add keychunk filter - by JimZAH (app_rpt)
@@ -25,21 +25,24 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Fix a race condition (chan_echolink)
 * Add APRS - send stats to aprs.fi [ER-N0CALL | EL-N0CALL] (chan_echolink)
 * Add message about your echolink node - similar to hamvoip (chan_echolink)
-* Echolink nodes/conferences are shown in names - if available (chan_echolink)
+* Echolink nodes/conferences are shown in names - if available (chan_echolink) [revised in Rev#7]
 * Fix echolink direction status (app_rpt)
-* Improve new call lookup method with DB update [recoded in Rev#5] (chan_echolink)
+* Improve new call lookup method with DB update [revised in Rev#7] (chan_echolink)
 * Log messages received from an EchoLink client to the ASL log file (chan_echolink)
 * Add an option to dump node linklist statistics (app_rpt)
-* Various critical changes and fixes have been made to the Asterisk core, resulting in increased stability and performance (asterisk)
+* Critical changes and fixes have been made to the asterisk core (asterisk)
+* Add linked list message check and attempt to reconnect as needed (app_rpt)
 
-* More to follow :)
+### Notes for Large Hub operation:
+For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
+For 80 or more directly connected nodes, 2 or more CPUs/vCPUs are required.
 
 ### DISCLAIMER:
 This software is provided "as-is" and for experimental purposes only, with no warranties or guarantees of any kind.
 
 -----------------------------------------------------------
 
-### How to install (Debian/Ubuntu):
+### How to install (Debian 11):
 
 * Install the DVSwitch Repo
 
@@ -71,8 +74,8 @@ libvorbis0a libvorbisenc2 libwrap0 zlib1g
 
 For amd64
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240113-6_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20240113-6_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240207-7_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20240207-7_amd64.deb
 </pre>
 
 -----------------------------------------------------------
