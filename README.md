@@ -31,7 +31,7 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Log messages received from an EchoLink client to the ASL log file (chan_echolink)
 * Add an option to dump node linklist statistics (app_rpt)
 * Critical changes and fixes have been made to the asterisk core (asterisk)
-* Add linked list message check and attempt to reconnect as needed (app_rpt)
+* Add linked list message check and attempt to reconnect as needed - similar to hamvoip (app_rpt)
 
 ### Notes for Large Hub operation:
 * For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
