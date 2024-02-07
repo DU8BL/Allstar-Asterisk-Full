@@ -27,15 +27,15 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Add message about your echolink node - similar to hamvoip (chan_echolink)
 * Echolink nodes/conferences are shown in names - if available (chan_echolink) [revised in Rev#7]
 * Fix echolink direction status (app_rpt)
-* Improve new call lookup method with DB update [revised in Rev#7] (chan_echolink)
+* Improve new call lookup method with DB update (chan_echolink) [revised in Rev#7]
 * Log messages received from an EchoLink client to the ASL log file (chan_echolink)
 * Add an option to dump node linklist statistics (app_rpt)
 * Critical changes and fixes have been made to the asterisk core (asterisk)
 * Add linked list message check and attempt to reconnect as needed (app_rpt)
 
 ### Notes for Large Hub operation:
-For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
-For 80 or more directly connected nodes, 2 or more CPUs/vCPUs are required.
+* For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
+* For 80 or more directly connected nodes, 2 or more CPUs/vCPUs are required.
 
 ### DISCLAIMER:
 This software is provided "as-is" and for experimental purposes only, with no warranties or guarantees of any kind.
