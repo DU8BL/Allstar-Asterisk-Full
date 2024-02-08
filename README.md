@@ -19,21 +19,23 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 * Fix timing issues (app_rpt) [revised in Rev#7]
 * Fix segfault "PBX may not have terminated properly ..." (app_rpt) [revised in Rev#7]
 * Refactored and revamp the code (app_rpt)
-* Add "phonesendlinks" - similar to hamvoip (app_rpt)
-* Add keychunk filter - by JimZAH (app_rpt)
-* Add voxhangtime - by davidgsd (chan_usbradio)
+* Added "phonesendlinks" - similar to hamvoip (app_rpt)
+* Added keychunk filter - by JimZAH (app_rpt)
+* Added voxhangtime - by davidgsd (chan_usbradio)
 * Fix a race condition (chan_echolink)
-* Add APRS - send stats to aprs.fi [ER-N0CALL | EL-N0CALL] (chan_echolink)
-* Add message about your echolink node - similar to hamvoip (chan_echolink)
+* Added APRS - send stats to aprs.fi [ER-N0CALL | EL-N0CALL] (chan_echolink)
+* Added message about your echolink node - similar to hamvoip (chan_echolink)
 * Echolink nodes/conferences are shown in names - if available (chan_echolink) [revised in Rev#7]
 * Fix echolink direction status (app_rpt)
 * Improve new call lookup method with DB update (chan_echolink) [revised in Rev#7]
 * Log messages received from an EchoLink client to the ASL log file (chan_echolink)
-* Add an option to dump node linklist statistics (app_rpt)
+* Added an option to dump node linklist statistics (app_rpt)
 * Critical changes and fixes have been made to the asterisk core (asterisk)
 * Add linked list message check and attempt to reconnect as needed - similar to hamvoip (app_rpt)
+* Added a sanity check [we don't want unwanted behavior to occur] (asterisk) [Rev#8]
 
 ### Notes for Large Hub operation:
+
 * For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
 * For 80 or more directly connected nodes, 2 or more CPUs/vCPUs are required.
 
@@ -74,8 +76,8 @@ libvorbis0a libvorbisenc2 libwrap0 zlib1g
 
 For amd64
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240207-7_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20240207-7_amd64.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240208-8_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20240208-8_amd64.deb
 </pre>
 
 -----------------------------------------------------------
