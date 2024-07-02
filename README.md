@@ -1,83 +1,84 @@
 # Allstar-Asterisk-Full
 Allstar-Asterisk-Full DEB packages for amd64 architecture
-* Debian 11
+* Debian 11 & 12
 
 -----------------------------------------------------------
 
 ### What is included in the DEB package:
 
-* binaries, modules, configs, sounds and updatenodelist
-
-### What is NOT included in the DEB package:
-
-* dahdi
+* dahdi, binaries, modules, configs, sounds and updatenodelist
 
 -----------------------------------------------------------
 
 ### Changes/Fixes:
 
-* Fix timing issues (app_rpt) [revised in Rev#7]
-* Fix segfault "PBX may not have terminated properly ..." (app_rpt) [revised in Rev#7]
-* Refactored and revamp the code (app_rpt)
-* Added "phonesendlinks" - similar to hamvoip (app_rpt)
-* Added keychunk filter - by JimZAH (app_rpt)
-* Added voxhangtime - by davidgsd (chan_usbradio)
-* Fix a race condition (chan_echolink)
-* Added APRS - send stats to aprs.fi [ER-N0CALL | EL-N0CALL] (chan_echolink)
-* Added message about your echolink node - similar to hamvoip (chan_echolink)
-* Echolink nodes/conferences are shown in names - if available (chan_echolink) [revised in Rev#7]
-* Fix echolink direction status (app_rpt)
-* Improve new call lookup method with DB update (chan_echolink) [revised in Rev#7]
-* Log messages received from an EchoLink client to the ASL log file (chan_echolink)
-* Added an option to dump node linklist statistics (app_rpt)
-* Critical changes and fixes have been made to the asterisk core (asterisk)
-* Add linked list message check and attempt to reconnect as needed - similar to hamvoip (app_rpt)
-* Added a sanity check [we don't want unwanted behavior to occur] (asterisk) [Rev#8]
+* Includes most changes from Revision #8.
+* Fixes a bug where app_rpt was not loading properly in Revision #8.
+* Addresses high CPU utilization in app_rpt as the number of nodes increases.
+* Adds AIOC to SimpleUSB and RadioUSB (no need to change PID and VID).
+* Introduce additional options to the menu of simpleusb-tune-menu.
 
 ### Notes for Large Hub operation:
 
-* For fewer than 80 directly connected nodes, 1 CPU/vCPU is sufficient.
-* For 80 or more directly connected nodes, 2 or more CPUs/vCPUs are required.
+* For fewer than 90~100 directly connected nodes, 1 CPU/vCPU is sufficient.
+* For 100 or more directly connected nodes, 2 or more CPUs/vCPUs is required.
 
 ### DISCLAIMER:
 This software is provided "as-is" and for experimental purposes only, with no warranties or guarantees of any kind.
 
 -----------------------------------------------------------
 
-### How to install (Debian 11):
+### How to install (Debian 11 & 12):
 
-* Install the DVSwitch Repo
+* Update and Upgrade the system:
 
+For Debian 11 & 12
 <pre>
-wget http://dvswitch.org/buster
-chmod +x buster
-./buster
 apt update
-</pre>
-
-* Install Linux Headers and DVSwitch dahdi package
-
-<pre>
-apt -y install linux-headers-$(uname -r)
-apt -y install allstar-dahdi-linux-dkms allstar-dahdi-linux-tools
+apt upgrade
 reboot
 </pre>
 
-* Install ASL Dependencies
+* Download and Install the Linux headers and DVSwitch DAHDI packages:
 
-For amd64
+For Debian 11 & 12
+<pre>
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-dahdi-linux-dkms_3.1.0.20210216-19_all.deb
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-dahdi-linux-tools_3.1.0.20210205-4_amd64.deb
+apt -y install linux-headers-$(uname -r)
+dpkg -i allstar-dahdi-linux-dkms_3.1.0.20210216-19_all.deb
+dpkg -i allstar-dahdi-linux-tools_3.1.0.20210205-4_amd64.deb
+reboot
+</pre>
+
+* Install ASL Dependencies:
+
+For Debian 11
 <pre>
 apt -y install libasound2 libc6 libcomerr2 libcurl4 libgcc1 libgsm1 libidn11 libiksemel3 \
 libncurses5 libnewt0.52 libogg0 libpopt0 libpri1.4 libspeex1 libstdc++6 libusb-0.1-4 \
 libvorbis0a libvorbisenc2 libwrap0 zlib1g
 </pre>
 
-* Download and install the Allstar-Asterisk-Full DEB package
-
-For amd64
+For Debian 12
 <pre>
-wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240208-8_amd64.deb
-dpkg -i allstar-asterisk-full_1.02-20240208-8_amd64.deb
+apt -y install libasound2 libc6 libcom-err2 libcurl4 libgcc1 libgsm1 libidn11 libiksemel3 \
+libncurses5 libnewt0.52 libogg0 libpopt0 libpri1.4 libspeex1 libstdc++6 libusb-0.1-4 \
+libvorbis0a libvorbisenc2 libwrap0 zlib1g
+</pre>
+
+* Download and install the Allstar-Asterisk-Full package:
+
+For Debian 11
+<pre>
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240702-9_deb11_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20240702-9_deb11_amd64.deb
+</pre>
+
+For Debian 12
+<pre>
+wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-asterisk-full_1.02-20240702-9_deb12_amd64.deb
+dpkg -i allstar-asterisk-full_1.02-20240702-9_deb12_amd64.deb
 </pre>
 
 -----------------------------------------------------------
@@ -88,4 +89,4 @@ Asterisk 1.4.23pre is copyright Digium (https://www.digium.com)
 
 app_rpt and associated programs (app_rpt suite) are copyright Jim Dixon, WB6NIL; AllStarLink, Inc.; and contributors
 
-DVSwitch repo and packages are copyright Steve Zingman, N4IRS; Michael Zingman, N4IRR; and contributors
+DVSwitch packages are copyright Steve Zingman, N4IRS; Michael Zingman, N4IRR; and contributors
