@@ -10,6 +10,16 @@ Allstar-Asterisk-Full DEB packages for amd64 architecture
 
 -----------------------------------------------------------
 
+### Notes:
+
+* Use the current revision as much as possible to prevent known bugs from previous revisions.
+* Address known bugs first before merging into the ASL3 base code.
+* Dahdi package is compatible for kernel version 6.X.
+
+### Submitting Issues:
+
+* Please submit any issues you encounter.
+
 ### Changes/Fixes:
 
 * Includes most changes from Revision #8.
