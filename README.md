@@ -49,13 +49,14 @@ apt upgrade
 reboot
 </pre>
 
-* Download and Install the Linux headers and DVSwitch DAHDI packages:
+* Download and Install the Linux headers and DVSwitch DAHDI packages and dependencies:
 
 For Debian 11 & 12
 <pre>
 wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-dahdi-linux-dkms_3.1.0.20210216-19_all.deb
 wget https://raw.githubusercontent.com/DU8BL/Allstar-Asterisk-Full/main/allstar-dahdi-linux-tools_3.1.0.20210205-4_amd64.deb
 apt -y install linux-headers-$(uname -r)
+apt -y install dkms libtonezone-dev fxload
 dpkg -i allstar-dahdi-linux-dkms_3.1.0.20210216-19_all.deb
 dpkg -i allstar-dahdi-linux-tools_3.1.0.20210205-4_amd64.deb
 reboot
